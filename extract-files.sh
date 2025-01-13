@@ -16,9 +16,6 @@ function blob_fixup() {
         vendor/lib*/libwrappergps.so)
                 "${PATCHELF}" --replace-needed libvndsecril-client.so libsecril-client.so "${2}"
                 ;;
-        vendor/lib64/libkeymaster_helper_vendor.so)
-                "${PATCHELF}" --add-needed libshim_crypto.so "${2}"
-                ;;
     esac
 }
 
@@ -34,4 +31,4 @@ export DEVICE=starlte
 export DEVICE_COMMON=exynos9810-common
 export VENDOR=samsung
 
-"./device/${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"
+"./../../${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"
