@@ -12,13 +12,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 $(call inherit-product, device/samsung/starlte/device.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/pb/config/common_full_phone.mk)
 
 # Device identifier, this must come after all inclusions
-PRODUCT_NAME := lineage_starlte
+PRODUCT_NAME := aosp_starlte
 PRODUCT_DEVICE := starlte
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-G960F
+PRODUCT_MODEL := starlte
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
